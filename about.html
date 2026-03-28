@@ -24,6 +24,20 @@
     <title>About | Prajwal</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css">
+    <style>
+        .glass-card {
+            background: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .nav-link {
+            @apply text-slate-400 hover:text-blue-400 transition-colors duration-300;
+        }
+        .nav-link.active {
+            @apply text-blue-400 font-bold;
+        }
+        body { background-color: #0f172a; }
+    </style>
 </head>
 <body>
     <nav class="fixed top-0 w-full z-50 glass-card !rounded-none border-b border-slate-800">
@@ -37,17 +51,37 @@
         </div>
     </nav>
 
-    <section class="py-40 max-w-4xl mx-auto px-6 space-y-16">
-        <div class="fade-up">
-            <h2 class="text-3xl font-bold mb-6 text-blue-400 flex items-center gap-4">
-                <span class="h-px w-12 bg-blue-400"></span> Heritage Documentation
-            </h2>
-            <p style="text-align: justify;" class="text-slate-400 text-xl leading-relaxed">
-         My name is Prajwal Shrestha, and I am a dedicated CA aspirant under the Institute of Chartered Accountants of Nepal (ICAN). With a strong interest in accounting, finance, and business, I am committed to building a solid foundation in professional ethics, analytical thinking, and financial expertise.<br>I am currently pursuing my journey toward becoming a Chartered Accountant, focusing on continuous learning, discipline, and consistency. My goal is not only to excel academically but also to develop practical skills that will enable me to contribute effectively in the corporate and financial sectors.<br>Driven by ambition and a passion for excellence, I strive to grow both personally and professionally as I progress in the field of accountancy.
-            </p>
+    <section class="py-40 max-w-6xl mx-auto px-6">
+        <div class="flex flex-col md:flex-row items-center gap-12 fade-up">
+            
+            <div class="flex-1 space-y-6">
+                <h2 class="text-3xl font-bold text-blue-400 flex items-center gap-4">
+                    <span class="h-px w-12 bg-blue-400"></span> About Me
+                </h2>
+                <p style="text-align: justify;" class="text-slate-400 text-lg md:text-xl leading-relaxed">
+                    My name is Prajwal Shrestha, and I am a dedicated CA aspirant under the Institute of Chartered Accountants of Nepal (ICAN). With a strong interest in accounting, finance, and business, I am committed to building a solid foundation in professional ethics, analytical thinking, and financial expertise.
+                </p>
+                <p style="text-align: justify;" class="text-slate-400 text-lg md:text-xl leading-relaxed">
+                    I am currently pursuing my journey toward becoming a Chartered Accountant, focusing on continuous learning, discipline, and consistency. My goal is not only to excel academically but also to develop practical skills that will enable me to contribute effectively in the corporate and financial sectors.
+                </p>
+                <p style="text-align: justify;" class="text-slate-400 text-lg md:text-xl leading-relaxed">
+                    Driven by ambition and a passion for excellence, I strive to grow both personally and professionally as I progress in the field of accountancy.
+                </p>
+            </div>
+
+            <div class="w-full md:w-80 shrink-0">
+                <div class="relative group">
+                    <div class="absolute -inset-1 bg-blue-500/20 rounded-3xl blur opacity-75 group-hover:opacity-100 transition duration-500"></div>
+                    <div class="relative aspect-square rounded-2xl overflow-hidden border border-slate-700 shadow-2xl">
+                        <img src="picture.jpg" alt="Prajwal Shrestha" class="w-full h-full object-cover grayscale hover:grayscale-0 transition duration-700 scale-105 hover:scale-100">
+                    </div>
+                </div>
+            </div>
+
         </div>
     </section>
-        <footer class="py-12 border-t border-slate-800/50 text-center">
+
+    <footer class="py-12 border-t border-slate-800/50 text-center">
         <p class="text-slate-500 text-sm">© Prajwal Shrestha 2026. <a href="terms.html" class="text-blue-400 hover:underline">T&C Applied</a></p>
     </footer>
 </body>
